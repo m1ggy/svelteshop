@@ -1,9 +1,11 @@
 <script>
   import { cartItems, toggle } from '../stores';
   import { clickOutside } from './onclickoutside';
+
   let localToggle = false;
   let localItems = [];
   let cartQuantity = 0;
+
   ///subscribe to writables
   toggle.subscribe((value) => (localToggle = value));
   cartItems.subscribe((value) => (localItems = value));
@@ -61,6 +63,7 @@
       <h4 on:click={handleToggle} class="cart">
         Cart <span class="cartNumber">{cartQuantity}</span>
       </h4>
+
       <div class={localToggle ? 'openCart' : 'closeCart'}>
         <div
           class="cartItemsContainer"

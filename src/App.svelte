@@ -5,6 +5,7 @@
 
 <svelte:head>
   <link rel="stylesheet" href="./global.css" />
+  <title>Svelteshop</title>
 </svelte:head>
 <Navbar />
 <main>
